@@ -58,8 +58,29 @@ var config = {
       console.log(tFirst);
       console.log(tfrequency);
       
-	
-	
+    
+    // Back day
+    var trainStartBackday = moment(tFirst, "hh:mm a").subtract(1, "days");
+    console.log(tFirst)
+
+        // Check different
+        var trainMinDiff = moment().diff(trainStartBackday, "minutes")
+        console.log(trainMinDiff)
+
+          // the remainder is the last train have runned minutes until now.
+    var trainLastMins = trainMinDiff % tfrequency
+    console.log(trainLastMins)
+
+          // minutes away for next train = frequency(total minutes) - remainder(last train have runned minutes)
+    var trainNextMins = tfrequency - trainLastMins
+    console.log(trainNextMins)
+
+
+	    // time when next train arrivaled = now time + minutes away for next train
+        var trainArrivalMins = moment().add(trainNextMins, "minutes")
+        var trainArrivalTime = moment(trainArrivalMins).format("LT")
+        console.log(trainArrivalMins)
+        console.log(trainArrivalTime)
 
   // Prettify the employee start
 //   var empStartPretty = moment.unix(empStart).format("MM/DD/YYYY");
@@ -79,7 +100,9 @@ var config = {
     $("<td>").text(tName),
     $("<td>").text(tDestination),
     $("<td>").text(tFirst),
-    $("<td>").text(tfrequency),
+    $("<td>").text(tfrequency + "-MIN"),
+    $("<td>").text(trainNextMins + " mins"),
+
     
     );
 
