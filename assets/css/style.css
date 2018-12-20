@@ -1,0 +1,30 @@
+/* body {
+    background-image: url(../images/train.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: fixed;
+
+} */
+
+.headTitle {
+    background-color: rgb(123, 60, 60);
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-radius: 0px 0px 4px 4px;
+}
+#train-table th,
+td {
+    display: inline-block;
+    width: 20%;
+}
+
+button, .card-header {
+    background: rgb(72, 88, 176);
+    color: white;
+}
+#train, #destination, #startTime, #frequency {
+    display: inline-block;
+    width: 20%;
+}
