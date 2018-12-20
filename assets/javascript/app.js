@@ -94,6 +94,11 @@ var config = {
 //   var empBilled = empMonths * empRate;
 //   console.log(empBilled);
 
+    // store keys of firebase
+    var key = childSnapshot.key
+    console.log(key)
+
+var removeButton = '<button type="submit" class="btn btn-secondary" id="remove-button" data-key="' + key + '"><i class="fas fa-trash-alt"></i></button>'
 
 
   var newRow = $("<tr>").append(
@@ -102,13 +107,18 @@ var config = {
     $("<td>").text(tFirst),
     $("<td>").text(tfrequency + "-MIN"),
     $("<td>").text(trainNextMins + " mins"),
+    $("<td>").html(removeButton)
 
     
     );
 
     $("#train-table > tbody").append(newRow);
     
-    
+    $(document).on("click", "#remove-button", function () {
+        database.ref().child($(this).attr("data-key")).remove();
+        window.location.reload();
+    })
+
 });
   
 
