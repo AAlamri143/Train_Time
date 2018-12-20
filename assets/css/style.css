@@ -20,6 +20,9 @@ td {
     width: 16.5%;
 }
 
+#remove-button {
+    margin-left: 10%;
+}
 
 
 button, .card-header {

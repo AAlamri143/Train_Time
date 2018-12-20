@@ -63,15 +63,15 @@ var config = {
     var trainStartBackday = moment(tFirst, "hh:mm a").subtract(1, "days");
     console.log(tFirst)
 
-        // Check different
-        var trainMinDiff = moment().diff(trainStartBackday, "minutes")
-        console.log(trainMinDiff)
+    // Check different
+    var trainMinDiff = moment().diff(trainStartBackday, "minutes")
+    console.log(trainMinDiff)
 
-          // the remainder is the last train have runned minutes until now.
+    // the remainder is the last train have runned minutes until now.
     var trainLastMins = trainMinDiff % tfrequency
     console.log(trainLastMins)
 
-          // minutes away for next train = frequency(total minutes) - remainder(last train have runned minutes)
+    // minutes away for next train = frequency(total minutes) - remainder(last train have runned minutes)
     var trainNextMins = tfrequency - trainLastMins
     console.log(trainNextMins)
 
@@ -98,14 +98,14 @@ var config = {
     var key = childSnapshot.key
     console.log(key)
 
-var removeButton = '<button type="submit" class="btn btn-secondary" id="remove-button" data-key="' + key + '"><i class="fas fa-trash-alt"></i></button>'
+var removeButton = '<button type="submit" id="remove-button" data-key="' + key + '"><i class="fas fa-times"></i></button>'
 
 
   var newRow = $("<tr>").append(
     $("<td>").text(tName),
     $("<td>").text(tDestination),
-    $("<td>").text(tFirst),
     $("<td>").text(tfrequency + "-MIN"),
+    $("<td>").text(trainArrivalTime),
     $("<td>").text(trainNextMins + " mins"),
     $("<td>").html(removeButton)
 
