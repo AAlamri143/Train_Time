@@ -21,7 +21,11 @@ td {
 }
 
 #remove-button {
-    margin-left: 10%;
+    margin-left: 45%;
+}
+#removetitle {
+    text-align: right;
+    padding-right: 5%;
 }
 
 

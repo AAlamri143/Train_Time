@@ -12,7 +12,20 @@ var config = {
 
   var database = firebase.database();
 
-  
+  /////////////    TIME    //////////////
+var momentDate = moment().format('dddd');
+var showDate = $(".date-moment").html('<i class="far fa-calendar-alt"></i> ' + momentDate)
+
+var momentDay = moment().format('LL');
+var showDay = $(".day-moment").text(momentDay);
+
+var momentTime = moment().format('LTS');
+var showTime = $(".time-moment").text(momentTime);
+
+setInterval(function () {
+    $(".time-moment").text(moment().format('LTS'));
+}, 1000);
+
 
 
   $(document).on("click", "#add-train-btn", function(event) {
