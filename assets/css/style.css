@@ -1,39 +1,140 @@
-/* body {
+body {
     background-image: url(../images/train.gif);
     background-repeat: no-repeat;
-    background-size: 100%;
     background-position: fixed;
-
-} */
+    background-size: fixed;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Crimson Text', serif;
+}
 
 .headTitle {
-    background-color: rgb(123, 60, 60);
+    background-color: rgba(0, 0, 0, 0.804);
     color: white;
     padding-top: 30px;
     padding-bottom: 30px;
     margin-bottom: 20px;
     border-radius: 0px 0px 4px 4px;
+    margin-right: 240px;
+    border-bottom: 3px solid white;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    margin-left: -70px;
+
+    font: 400 100px/1.3 'Arizonia', Helvetica, sans-serif;
+    color: #ffffff;
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.1);   
 }
 #train-table th,
 td {
     display: inline-block;
     width: 16.5%;
+    /* text-align: center; */
 }
 
 #remove-button {
-    margin-left: 45%;
+    color: rgb(255, 0, 0);
+    margin-left: 30%;
 }
 #removetitle {
     text-align: right;
     padding-right: 5%;
 }
+.adding {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+p {
+    float: right;
+}
 
 
 button, .card-header {
-    background: rgb(72, 88, 176);
+    background: rgba(2, 2, 79, 0.804);
     color: white;
 }
 #train, #destination, #startTime, #frequency {
     display: inline-block;
     width: 20%;
 }
+
+.mb-4 {
+    background: rgba(0, 0, 0, 0.639);
+    color: white;
+    border: 3px solid white;
+    margin-left: -70px;
+
+}
+.panel-footer {
+    background: black;
+}
+
+td :hover{
+    font-weight: bold;
+    background: rgba(55, 21, 21, 0.954);
+    color: rgb(255, 166, 0);
+}
+
+
+tbody :hover{
+    /* font-weight: bold; */
+    color: rgb(255, 166, 0);
+
+
+    -webkit-transform: scale(1.0);
+    -moz-transform: scale(1.0);
+    transform: scale(1.0);
+
+    -webkit-transition:all .2s linear;
+    -moz-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear;
+    -moz-border-radius:2x 2px 2px 2px ;
+    -webkit-border-radius:2px 2px 2px 2px ;
+    border-radius: 1px ;
+    }
+
+.time-moment {
+    float: right;
+    margin-top: -30px;
+    font-size: 20px;
+
+}
+
+
+/* media query */
+@media (min-width: 575px) and (max-width: 768px) {
+
+    .time-moment{
+        font-size: 100%;
+    }
+    
+    #train-hour, #train-min{
+        float: left;
+        width: 100%;
+    }
+    
+    #train-ampm{
+        float: left;
+        width: 100%;
+    }
+    
+    th, td{
+        font-size: 85%;
+    }
+    }
+    
+    @media (max-width: 574px) {
+    
+    #jumbonav{
+        padding: 15px;
+    }
+    #jumbo{
+        font-size: 200%;
+    }
+    #leader, th, td{
+        font-size: 70%;
+    }
+    }

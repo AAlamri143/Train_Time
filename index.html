@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+  <link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
   crossorigin="anonymous">
 
   <!-- Moment.js Reference -->
@@ -27,6 +27,11 @@
 
 <body>
 
+    <audio src="assets/images/run.mp3" autoplay="autoplay" loop="loop"></audio>
+
+    <!-- <audio controls preload="metadata" style="height: 52px; opacity: .5; margin-left: 20px; margin-top: 0px;"> 
+        <source src="assets/images/run.mp3" type="audio/mp3">
+     </audio> -->
   <div class="container">
 
     <!-- headTitle -->
@@ -37,7 +42,7 @@
 
     <div class="row">
 
-      <div class="col-md-12">
+      <div class="col-md-9">
 
         <!-- Current Train-->
         <div class="card mb-4">
@@ -58,9 +63,9 @@
                 <tr>
                   <th scope="col">Train Name</th>
                   <th scope="col">Destination</th>
-                  <th scope="col">Frequency (min)</th>
+                  <th scope="col">Frequency</th>
                   <th scope="col">Next Arrival</th>
-                  <th scope="col">Minutes Away</th>
+                  <th scope="col">Away</th>
                   <th scope="col" id="removetitle">Remove</th>
                 </tr>
               </thead>
@@ -73,35 +78,56 @@
       </div>
     </div>
 
+
+
+
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-6">
+          <div class="panel-group">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                      <div class="card mb-4">
+                          <div class="card-header"><i class = "fa fa-train fa-lg"></i>  Add Train
+                
+                    <a data-toggle="collapse" href="#collapse1"><i class="adding"><p><i class="fas fa-plus"></i></p></i></a>
+                  </div>
+                <div id="collapse1" class="panel-collapse collapse">
         <!-- Add Train  -->
-        <div class="card mb-4">
-          <div class="card-header"><i class = "fa fa-train fa-lg"></i>  Add Train</div>
-          <div class="card-body">
+        <div class="card-body">
 
 
-              <form>
-              <div class="form-group">
-                <label for="train-name-input">Train Name</label>
-                <input class="form-control" id="train-name-input" placeholder="Cho Cho Train" type="text">
+            <form>
+            <div class="form-group">
+              <label for="train-name-input">Train Name</label>
+              <input class="form-control" id="train-name-input" placeholder="Cho Cho Train" type="text">
+            </div>
+            <div class="form-group">
+              <label for="destination-input">Destination</label>
+              <input class="form-control" id="destination-input" placeholder="City, State" type="text">
+            </div>
+            <div class="form-group">
+                  <label for="first-train-time-input">First Train Time (HH:mm - military time)</label>
+                  <input class="form-control" id="first-train-time-input" placeholder="hh:mm" type="text">
+                </div> 
+            <div class="form-group">
+              <label for="frequency-input">Frequency (min)</label>
+              <input class="form-control" id="frequency-input" placeholder="mm" type="text">
+            </div>    
+            <button class="btn float-left" id="add-train-btn">Submit</button>
+
+          </form>
+
+        </div>
+
+                </div>
+                <div class="panel-footer"></div>
+
               </div>
-              <div class="form-group">
-                <label for="destination-input">Destination</label>
-                <input class="form-control" id="destination-input" placeholder="City, State" type="text">
-              </div>
-              <div class="form-group">
-                    <label for="first-train-time-input">First Train Time (HH:mm - military time)</label>
-                    <input class="form-control" id="first-train-time-input" placeholder="hh:mm" type="text">
-                  </div> 
-              <div class="form-group">
-                <label for="frequency-input">Frequency (min)</label>
-                <input class="form-control" id="frequency-input" placeholder="mm" type="text">
-              </div>    
-              <button class="btn float-left" id="add-train-btn">Submit</button>
-            </form>
 
-          </div>
+            </div>
+          </h4>
+        </div>
         </div>
       </div>
 

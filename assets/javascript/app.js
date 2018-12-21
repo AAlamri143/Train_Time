@@ -95,24 +95,15 @@ setInterval(function () {
         console.log(trainArrivalMins)
         console.log(trainArrivalTime)
 
-  // Prettify the employee start
-//   var empStartPretty = moment.unix(empStart).format("MM/DD/YYYY");
-
-//   // Calculate the months worked using hardcore math
-//   // To calculate the months worked
-//   var empMonths = moment().diff(moment(empStart, "X"), "months");
-//   console.log(empMonths);
-
-//   // Calculate the total billed rate
-//   var empBilled = empMonths * empRate;
-//   console.log(empBilled);
 
     // store keys of firebase
     var key = childSnapshot.key
     console.log(key)
 
-var removeButton = '<button type="submit" id="remove-button" data-key="' + key + '"><i class="fas fa-times"></i></button>'
+var removeButton = '<button type="submit" class="" id="remove-button" data-key="' + key + '"><i class="fas fa-times"></i></button>'
 
+var Sound = new Audio('assets/images/go.mp3');
+Sound.play();
 
   var newRow = $("<tr>").append(
     $("<td>").text(tName),
