@@ -107,34 +107,9 @@ tbody :hover{
 /* media query */
 @media (min-width: 575px) and (max-width: 768px) {
 
-    .time-moment{
-        font-size: 100%;
-    }
-    
-    #train-hour, #train-min{
-        float: left;
-        width: 100%;
-    }
-    
-    #train-ampm{
-        float: left;
-        width: 100%;
-    }
-    
-    th, td{
-        font-size: 85%;
-    }
+
     }
     
     @media (max-width: 574px) {
     
-    #jumbonav{
-        padding: 15px;
-    }
-    #jumbo{
-        font-size: 200%;
-    }
-    #leader, th, td{
-        font-size: 70%;
-    }
     }
