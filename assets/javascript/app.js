@@ -30,12 +30,15 @@ setInterval(function () {
 
   $(document).on("click", "#add-train-btn", function(event) {
       event.preventDefault();
-
-      var trainInput = $("#train-name-input").val().trim();
-      var destinInput = $("#destination-input").val().trim();
-      var firstInput = $("#first-train-time-input").val().trim();
-      var frequInput = $("#frequency-input").val().trim();
-
+      var Sound = new Audio('assets/images/go.mp3');
+      Sound.play();
+      
+      
+        var trainInput = $("#train-name-input").val().trim();
+        var destinInput = $("#destination-input").val().trim();
+        var firstInput = $("#first-train-time-input").val().trim();
+        var frequInput = $("#frequency-input").val().trim();
+      
       var newTrain = {
           name: trainInput,
           destination: destinInput,
@@ -102,8 +105,7 @@ setInterval(function () {
 
 var removeButton = '<button type="submit" class="" id="remove-button" data-key="' + key + '"><i class="fas fa-times"></i></button>'
 
-var Sound = new Audio('assets/images/go.mp3');
-Sound.play();
+
 
   var newRow = $("<tr>").append(
     $("<td>").text(tName),
