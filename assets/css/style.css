@@ -72,9 +72,7 @@ button, .card-header {
     font-size: 25px;
 }
 
-
-
-.card-body1 {
+.card-body {
 
     padding: 10px 20px 50px 20px ;
 }
@@ -83,19 +81,30 @@ button, .card-header {
     display: inline-block;
     width: 20%;
 }
+.mb-5 {
+    background: #000000a3;
+    color: white;
+    border: 3px solid white;
+    margin-left: -70px;
+}
+
 
 .mb-4 {
     background: #000000a3;
     color: white;
     border: 3px solid white;
     margin-left: -70px;
-
 }
+
+
 
 .panel-footer {
     background: black;
 }
 
+tbody td {
+    margin-bottom: 0px;
+}
 td :hover{
     font-weight: bold;
     background: rgba(55, 21, 21, 0.954);
@@ -135,7 +144,7 @@ tbody :hover{
 
 #add-train-btn {
     border: 1px solid white;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     margin-top: 10px;
 }
 
@@ -147,7 +156,6 @@ label {
 
 .group {
     display: inline-block;
-
     float: left;
 }
 
@@ -158,11 +166,41 @@ label {
 
 }
 /* media query */
-@media (min-width: 575px) and (max-width: 768px) {
+@media (min-width: 992px) and (max-width: 3000px) {
+    .headTitle {
+        width: 80.8%;
+    }
 
+    }
+
+@media (min-width: 575px) and (max-width: 992px) {
+    .headTitle {
+        width: 120%;
+    }
+    .mb-5{
+        width: 162.5%;
+    }
+    .group{
+        font-size: 2px;
+    }
+
+    th {
+        font-size: 80%;
+        padding: 90px;
+    }
 
     }
     
     @media (max-width: 574px) {
-    
+        .headTitle {
+            width: 120%;
+        }
+        .mb-5{
+            width: 120%;
+        }
+
+        th {
+            font-size: 70%;
+            padding: 90px;
+        }
     }
