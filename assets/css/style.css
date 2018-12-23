@@ -11,8 +11,8 @@ body {
 .headTitle {
     background-color: rgba(0, 0, 0, 0.804);
     color: white;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin-bottom: 20px;
     border-radius: 0px 0px 4px 4px;
     margin-right: 240px;
@@ -30,9 +30,14 @@ td {
     /* text-align: center; */
 }
 
+
 #remove-button {
     color: rgb(255, 0, 0);
     margin-left: 30%;
+    border-radius: 50%;
+    height: 80%;
+    padding: 0 5px;
+    border: 1px solid white;
 }
 #removetitle {
     text-align: right;
@@ -41,8 +46,15 @@ td {
 .adding {
     color: rgb(255, 255, 255);
     text-align: center;
-    font-size: 30px;
+    font-size: 18px;
     font-weight: bolder;
+}
+.adding.width {
+    height: auto;
+    -webkit-transition: width 0.35s ease;
+    -moz-transition: width 0.35s ease;
+    -o-transition: width 0.35s ease;
+    transition: width 0.35s ease;
 }
 p {
     float: right;
@@ -50,21 +62,36 @@ p {
 
 
 button, .card-header {
-    background: rgba(2, 2, 79, 0.804);
+    background: rgba(22, 22, 34, 0.804);
     color: white;
+    padding-bottom: 0px;
+    border-bottom: .5px solid rgba(255, 255, 255, 0.399);
 }
+.fa-lg {
+    padding-left: 15px;
+    font-size: 25px;
+}
+
+
+
+.card-body1 {
+
+    padding: 10px 20px 50px 20px ;
+}
+
 #train, #destination, #startTime, #frequency {
     display: inline-block;
     width: 20%;
 }
 
 .mb-4 {
-    background: rgba(0, 0, 0, 0.639);
+    background: #000000a3;
     color: white;
     border: 3px solid white;
     margin-left: -70px;
 
 }
+
 .panel-footer {
     background: black;
 }
@@ -96,12 +123,40 @@ tbody :hover{
 
 .time-moment {
     float: right;
-    margin-top: -30px;
+    margin-top: -40px;
     font-size: 20px;
 
 }
 
+#train-hour, #train-min{
+    float: left;
+    width: 30%;
+}
 
+#add-train-btn {
+    border: 1px solid white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+label {
+    font-size: 20px;
+    padding-right: 20px;
+
+}
+
+.group {
+    display: inline-block;
+
+    float: left;
+}
+
+.form-control {
+    width: 180px;
+    margin-bottom: 3px;
+    margin-right: 17px;
+
+}
 /* media query */
 @media (min-width: 575px) and (max-width: 768px) {
 

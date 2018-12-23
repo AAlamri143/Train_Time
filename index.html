@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
   crossorigin="anonymous">
 
@@ -46,13 +45,13 @@
 
       <div class="col-md-9">
 
-        <!-- Current Train-->
+        <!-- Train Schedule-->
         <div class="card mb-4">
           <div class="card-header">
               <h4 class="col-md-6" id="icon"> <i class="far fa-clock"></i> Train Schedule</h4>
-          <!-- <h4 class="col-md-6" id="clock"><span id = "currentTime"></span></h4> -->
-          <div class="time-container">
-            <!-- <img src="assets/images/time.gif" class="time-gif" alt="time"> -->
+
+              <div class="time-container">
+
             <div class="time-moment"></div>
             <div class="day-moment"></div>
             <div class="date-moment"></div>
@@ -84,13 +83,13 @@
 
 
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-5">
           <div class="panel-group">
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title">
                       <div class="card mb-4">
-                          <div class="card-header"><i class = "fa fa-train fa-lg"></i>  Add Train
+                          <div class="card-header"><i class ="fa fa-train fa-lg"></i>  Add Train
                 
                     <a data-toggle="collapse" href="#collapse1"><i class="adding"><p><i class="fas fa-plus"></i></p></i></a>
                   </div>
@@ -100,24 +99,24 @@
 
 
             <form>
-            <div class="form-group">
+            <div class="group">
               <label for="train-name-input">Train Name</label>
               <input class="form-control" id="train-name-input" placeholder="Cho Cho Train" type="text">
             </div>
-            <div class="form-group">
+            <div class="group">
               <label for="destination-input">Destination</label>
               <input class="form-control" id="destination-input" placeholder="City, State" type="text">
             </div>
-            <div class="form-group">
-                  <label for="first-train-time-input">First Train Time (HH:mm - military time)</label>
+            <div class="group">
+                  <label for="first-train-time-input">First Train Time</label>
                   <input class="form-control" id="first-train-time-input" placeholder="hh:mm" type="text">
                 </div> 
-            <div class="form-group">
+            <div class="group">
               <label for="frequency-input">Frequency (min)</label>
               <input class="form-control" id="frequency-input" placeholder="mm" type="text">
             </div>    
-            <button class="btn float-left" id="add-train-btn">Submit</button>
-
+            <!-- <button class="btn float-left" id="add-train-btn">Submit</button> -->
+            <button type="button" class="btn btn-outline-dark" id="add-train-btn">Submit</button>
           </form>
 
         </div>
