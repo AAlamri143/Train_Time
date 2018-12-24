@@ -26,118 +26,77 @@
 </head>
 
 <body>
-    <iframe src="assets/images/run.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+    <iframe src="assets/images/run.mp3" allowed="autoplay" style="display:none" id="iframeAudio">
     </iframe> 
-        <!-- <audio src="assets/images/run.mp3" id="my_audio" loop="loop" autoplay="autoplay"></audio> -->
-
-    <!-- <audio controls preload="metadata" style="height: 52px; opacity: .5; margin-left: 20px; margin-top: 0px;"> 
-        <source src="assets/images/run.mp3" type="audio/mp3">
-     </audio> -->
-  <div class="container">
 
     <!-- headTitle -->
     <div class="headTitle">
-      <h1 class="text-center">Anytime is Train Time</h1>
-      <h4 class="text-center">Choo Choo. Chee Chee.</h4>
+        <h1 class="text-center">Anytime is Train Time</h1>
+        <h4 class="text-center">Choo Choo. Chee Chee.</h4>
     </div>
-
-    <div class="row">
-
-      <div class="col-md-9">
-
-        <!-- Train Schedule-->
-        <div class="card mb-5">
-          <div class="card-header">
-              <h4 class="col-md-6" id="icon"> <i class="far fa-clock"></i> Train Schedule</h4>
-
-              <div class="time-container">
-
-            <div class="time-moment"></div>
-            <div class="day-moment"></div>
-            <div class="date-moment"></div>
-    
-        </div>
+    <div class="firstT">
+        <div class="titleT">
+            <h4 class="col-md" id="icon"> <i class="far fa-clock"></i> Train Schedule</h4>
         </div>
         <div class="card-body">
             <table class="table table-sm table-hover" id='train-table'>
-              <thead>
-                <tr>
-                  <th scope="col">Train Name</th>
-                  <th scope="col">Destination</th>
-                  <th scope="col">Frequency</th>
-                  <th scope="col">Next Arrival</th>
-                  <th scope="col">Away</th>
-                  <th scope="col" id="removetitle">Remove</th>
-                </tr>
-              </thead>
-              <tbody>
+                <thead>
+                  <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Away</th>
+                    <th scope="col" id="removetitle">Remove</th>
+                  </tr>
+                </thead>
+                <tbody>
 
-              </tbody>
+                </tbody>
             </table>
-          </div>
         </div>
-      </div>
+        <footer class="footer">
+            <div class="time-moment"></div>
+        </footer>
     </div>
 
+    <div class="secondT">
+        <div class="titleT">
 
+            <div class="card-header"><i class ="fa fa-train fa-lg"></i>  Add Train
 
+                <a data-toggle="collapse" href="#collapse1"><i class="adding1"><p><i class="fas fa-plus"></i></p></i></a>
 
-    <div class="row">
-      <div class="col-md-5">
-          <div class="panel-group">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                      <div class="card mb-4">
-                          <div class="card-header"><i class ="fa fa-train fa-lg"></i>  Add Train
-                
-                    <a data-toggle="collapse" href="#collapse1"><i class="adding"><p><i class="fas fa-plus"></i></p></i></a>
-                  </div>
-                <div id="collapse1" class="panel-collapse collapse">
+            </div>
+        </div>
+
+        <div id="collapse1" class="panel-collapse collapse">
         <!-- Add Train  -->
-        <div class="card-body">
+            <div class="card-bodyT">
 
-
-            <form>
-            <div class="group">
-              <label for="train-name-input">Train Name</label>
-              <input class="form-control" id="train-name-input" placeholder="Cho Cho Train" type="text">
+                <form>
+                    <div class="group1">
+                        <label for="train-name-input">Train Name</label>
+                        <input class="form-control" id="train-name-input" placeholder="Cho Cho Train" type="text">
+                    </div>
+                    <div class="group1">
+                        <label for="destination-input">Destination</label>
+                        <input class="form-control" id="destination-input" placeholder="City, State" type="text">
+                    </div>
+                    <div class="group2">
+                        <label for="first-train-time-input">First Train Time</label>
+                        <input class="form-control" id="first-train-time-input" placeholder="hh:mm" type="text">
+                    </div> 
+                    <div class="group2">
+                        <label for="frequency-input">Frequency (min)</label>
+                        <input class="form-control" id="frequency-input" placeholder="mm" type="text">
+                    </div> 
+                    <div class="group3">   
+                        <button type="button" class="btn btn-outline-dark" id="add-train-btn">Submit</button>
+                    </div>
+                </form>
             </div>
-            <div class="group">
-              <label for="destination-input">Destination</label>
-              <input class="form-control" id="destination-input" placeholder="City, State" type="text">
-            </div>
-            <div class="group">
-                  <label for="first-train-time-input">First Train Time</label>
-                  <input class="form-control" id="first-train-time-input" placeholder="hh:mm" type="text">
-                </div> 
-            <div class="group">
-              <label for="frequency-input">Frequency (min)</label>
-              <input class="form-control" id="frequency-input" placeholder="mm" type="text">
-            </div>    
-            <!-- <button class="btn float-left" id="add-train-btn">Submit</button> -->
-            <button type="button" class="btn btn-outline-dark" id="add-train-btn">Submit</button>
-          </form>
-
         </div>
-
-                </div>
-                <div class="panel-footer"></div>
-
-              </div>
-
-            </div>
-          </h4>
-        </div>
-        </div>
-      </div>
-
     </div>
-
-  </div>
-
 </body>
-
-
-
 </html>
